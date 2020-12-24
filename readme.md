@@ -1,7 +1,7 @@
 # YAZILIM TASARIMI VE MİMARİSİ
-<hr>
+<hr></hr>
 ## SOLID PRENSİPLER
-<hr>
+<hr></hr>
 ### Single Responsibility Prensibi (***S***)
 
 * Single Responsibility ***(Tek Sorumluluk)*** prensibi geliştirilen sınıfların tek bir görevi olması gerektiğini önermektedir.
@@ -15,7 +15,7 @@
 * Tek sorumluluğu olan bir sınıfın test durumları ve sınıflar arası bağlılığı daha az olacaktır.
 * Sınıfların tek bir görevi olduğu için daha yalın bir yapıda olacak ve bu kodun anlaşılabilirliğini artıracaktır.
 * ***Özet olarak sorumluluğun azaltılması değişime daha kolay adapte olması anlamına gelmektedir.***
-<hr>
+<hr></hr>
 
 ### Open-Closed Prensibi (***O***)
 
@@ -24,15 +24,15 @@
 * ***Kapalı*** özelliği ise mevcut sınıf için yazılan özellik ve davranışların değişmemesi gerektiğini söylemektedir.
 * Açık kapalı prensibi yazılan kodun tekrar kullanılabilirliğini ve sürdürebilir bir proje geliştirmenin temelini oluşturmaktadır.
 * Geliştirilen yazılım üzerinde değişim yapmak ortaya yazılım hataları ve maliyet çıkarmaktadır. Bazı durumlarda uygulama geliştirme sürecinden uzun bir süre sonra yeni gereksinimler ortaya çıkabilir. Bu durumda değişim yapmak oldukça zor bir süreçtir. Bunun önüne geçebilmek için uygulama açık-kapalı prensibi düşünülerek geliştirilmelidir. Uygulamada geliştirilen sınıfların gerçek dünyadaki karşılıklarına göre ortaya çıkabilecek yeni özellik ve davranışlara göre tasarlanmalıdır. ***Bu şekilde geliştirilen uygulamada değişim olmaz iken gelişim mümkün olmaktadır.***
-<hr>
+<hr></hr>
 
 ### L
 
-<hr>
+<hr></hr>
 ### I
 
-<hr>
+<hr></hr>
 ### D
 
-<hr>
+<hr></hr>
 ## TASARIM DESENLERİ
