@@ -40,3 +40,56 @@
 
 <hr></hr>
 ## TASARIM DESENLERİ
+
+1. Yaratıcı Tasarım Desenleri
+**Bu sınıfta yer alan tasarım desenleri, nesnelerin uygun ve verimli bir şekilde yaratılma yollarıyla ilgilenirler. Nesne yaratma sorumluluklarını, farklı sınıf düzenlerinde soyutlayarak yaparlar. Başlıca yaratıcı tasarım desenleri: Tek Nesne, Fabrika Yordam, Soyut Fabrika, Kopya Nesne, Kurulum Nesnesi.**
+<hr></hr>
+  * Tek Nesne ( Singleton )
+
+  * Fabrika Yordam ( Factory Method )
+
+  * Soyut Fabrika ( Abstract Factory )
+
+  * Kopya Nesne ( Prototype )
+
+  * Kurucu ( Builder )
+
+2. Yapısal Tasarım Desenleri
+**Bu sınıfta yer alan tasarım desenleri, sınıflar arasındaki ilişkileri belirleyerek, tasarımı kolaylaştırırlar. Sınıflar arası ilişkiler nasıl olmalı? Türetme, soyutlama, nesnesini içerme? Hangi yol ile sınıflar birbirlerine bağlı olmalı. Bu soruların yanıtlarını açıklarlar. Başlıca yapısal tasarım desenleri: Adaptör, Ağaç Yapısı, Dekorasyon, Hafif Ağırlık, Köprü, Ön Yüz, Özdeş Nesne.**
+<hr></hr>
+  * Adaptör ( Adapter )
+
+  * Ağaç Yapısı ( Composite )
+
+  * Dekorasyon ( Decorator )
+
+  * Hafif Ağırlık ( Flyweight )
+
+  * Köprü ( Bridge )
+
+  * Ön Yüz ( Facade )
+
+  * Özdeş Nesne ( Proxy )
+
+3. Davranışsal Tasarım Desenleri
+**Bu sınıfta yer alan tasarım desenleri, sınıflar arasındaki haberleşmelerin nasıl olması gerektiğini belirler. Çalışma zamanında sınıflar, nasıl haberleşme yöntemleri ile sistemin akışını belirlerler? Bu sınıftaki tasarım desenleri bu soruya yanıtı verirler. Başlıca davranışsal tasarım desenleri: Arabulucu, Durum, Gözlemci, Hatırlayıcı, Kalıp Yordam, Komut, Sorumluluk Zinciri, Strateji, Yorumlayıcı, Ziyaretçi.**
+<hr></hr>
+  * Arabulucu ( Mediator )
+
+  * Durum ( State )
+
+  * Gözlemci ( Observer )
+
+  * Hatırlayıcı ( Memento )
+
+  * Kalıp Yordam ( Template Method )
+
+  * Komut ( Command )
+
+  * Sorumluluk Zinciri ( Chain of Res. )
+
+  * Strateji ( Strategy )
+
+  * Yorumlayıcı ( Interpreter )
+
+  * Ziyaretçi ( Visitor )
