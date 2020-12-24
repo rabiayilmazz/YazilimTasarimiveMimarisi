@@ -1,0 +1,16 @@
+# YAZILIM TASARIMI VE MİMARİSİ
+
+##SOLID PRENSİPLER
+
+### S
+### O
+### L
+### I
+### D
+
+
+
+
+
+
+##TASARIM DESENLERİ
