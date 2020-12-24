@@ -1,4 +1,5 @@
 # YAZILIM TASARIMI VE MİMARİSİ
+
 <hr></hr>
 
 ## SOLID PRENSİPLER
