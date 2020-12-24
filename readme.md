@@ -1,9 +1,9 @@
 # YAZILIM TASARIMI VE MİMARİSİ
-
+<hr>
 ## SOLID PRENSİPLER
+<hr>
+### Single Responsibility Prensibi (***S***)
 
-### S
-#### Single Responsibility Prensibi
 * Single Responsibility ***(Tek Sorumluluk)*** prensibi geliştirilen sınıfların tek bir görevi olması gerektiğini önermektedir.
   * Yani geliştirilen bir sınıfın tek bir amacı olmalı ve o amaç doğrultusunda özellik ve fonksiyonlar barındırmalıdır.
 * Geliştirilen bir sınıfta farklı amaç ve görevler var ise bu prensibe aykırı bir geliştirme süreci olduğu ortaya çıkmaktadır.
@@ -15,14 +15,24 @@
 * Tek sorumluluğu olan bir sınıfın test durumları ve sınıflar arası bağlılığı daha az olacaktır.
 * Sınıfların tek bir görevi olduğu için daha yalın bir yapıda olacak ve bu kodun anlaşılabilirliğini artıracaktır.
 * ***Özet olarak sorumluluğun azaltılması değişime daha kolay adapte olması anlamına gelmektedir.***
+<hr>
 
+### Open-Closed Prensibi (***O***)
 
-### O
+* Open-Closed ***(Açık-Kapalı)*** prensibi geliştirilen sınıfların __gelişime açık değişime kapalı olması__ gerektiğini önermektedir.
+* ***Açık*** özelliği sınıfların yeni özellik ve davranışları kolay bir şekilde kazanabilmesini sağlar. Gereksinimler değiştiğinde bu ihtiyacı karşılayacak yeni bloklar eklenebilmelidir.
+* ***Kapalı*** özelliği ise mevcut sınıf için yazılan özellik ve davranışların değişmemesi gerektiğini söylemektedir.
+* Açık kapalı prensibi yazılan kodun tekrar kullanılabilirliğini ve sürdürebilir bir proje geliştirmenin temelini oluşturmaktadır.
+* Geliştirilen yazılım üzerinde değişim yapmak ortaya yazılım hataları ve maliyet çıkarmaktadır. Bazı durumlarda uygulama geliştirme sürecinden uzun bir süre sonra yeni gereksinimler ortaya çıkabilir. Bu durumda değişim yapmak oldukça zor bir süreçtir. Bunun önüne geçebilmek için uygulama açık-kapalı prensibi düşünülerek geliştirilmelidir. Uygulamada geliştirilen sınıfların gerçek dünyadaki karşılıklarına göre ortaya çıkabilecek yeni özellik ve davranışlara göre tasarlanmalıdır. ***Bu şekilde geliştirilen uygulamada değişim olmaz iken gelişim mümkün olmaktadır.***
+<hr>
 
 ### L
 
+<hr>
 ### I
 
+<hr>
 ### D
 
+<hr>
 ## TASARIM DESENLERİ
