@@ -47,7 +47,8 @@
 
 <hr></hr>
 
-1. Yaratıcı Tasarım Desenleri
+1. ***Yaratıcı Tasarım Desenleri***
+
 **Bu sınıfta yer alan tasarım desenleri, nesnelerin uygun ve verimli bir şekilde yaratılma yollarıyla ilgilenirler. Nesne yaratma sorumluluklarını, farklı sınıf düzenlerinde soyutlayarak yaparlar. Başlıca yaratıcı tasarım desenleri: Tek Nesne, Fabrika Yordam, Soyut Fabrika, Kopya Nesne, Kurulum Nesnesi.**
 
   * Tek Nesne ( Singleton )
@@ -59,10 +60,11 @@
   * Kopya Nesne ( Prototype )
 
   * Kurucu ( Builder )
-  
+
 <hr></hr>
 
-2. Yapısal Tasarım Desenleri
+2. ***Yapısal Tasarım Desenleri***
+
 **Bu sınıfta yer alan tasarım desenleri, sınıflar arasındaki ilişkileri belirleyerek, tasarımı kolaylaştırırlar. Sınıflar arası ilişkiler nasıl olmalı? Türetme, soyutlama, nesnesini içerme? Hangi yol ile sınıflar birbirlerine bağlı olmalı. Bu soruların yanıtlarını açıklarlar. Başlıca yapısal tasarım desenleri: Adaptör, Ağaç Yapısı, Dekorasyon, Hafif Ağırlık, Köprü, Ön Yüz, Özdeş Nesne.**
 
   * Adaptör ( Adapter )
@@ -81,7 +83,8 @@
 
 <hr></hr>
 
-3. Davranışsal Tasarım Desenleri
+3. ***Davranışsal Tasarım Desenleri***
+
 **Bu sınıfta yer alan tasarım desenleri, sınıflar arasındaki haberleşmelerin nasıl olması gerektiğini belirler. Çalışma zamanında sınıflar, nasıl haberleşme yöntemleri ile sistemin akışını belirlerler? Bu sınıftaki tasarım desenleri bu soruya yanıtı verirler. Başlıca davranışsal tasarım desenleri: Arabulucu, Durum, Gözlemci, Hatırlayıcı, Kalıp Yordam, Komut, Sorumluluk Zinciri, Strateji, Yorumlayıcı, Ziyaretçi.**
 
   * Arabulucu ( Mediator )
