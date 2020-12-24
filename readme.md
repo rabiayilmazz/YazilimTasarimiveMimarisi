@@ -1,7 +1,10 @@
 # YAZILIM TASARIMI VE MİMARİSİ
 <hr></hr>
+
 ## SOLID PRENSİPLER
+
 <hr></hr>
+
 ### Single Responsibility Prensibi (***S***)
 
 * Single Responsibility ***(Tek Sorumluluk)*** prensibi geliştirilen sınıfların tek bir görevi olması gerektiğini önermektedir.
