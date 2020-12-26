@@ -31,15 +31,26 @@
 
 <hr></hr>
 
-### L
+### Liskov Substitution Prensibi (***L***)
+
+* Liskov Substitution ***(Yerine Geçme)*** prensibi alt sınıfların üst sınıfın özelliklerini ve fonksiyonlarını aynı işlevi gösterecek şekilde kullanabilmesidir.
+* Üst sınıf referansına ihtiyaç duyan bir fonksiyona gönderilen alt sınıfın fonksiyonun gereklerini yerine getirebilmesi gerekmektedir. Ayrıca üst sınıfta tanımlı olan özellik ve fonksiyonlar alt sınıf için gereksiz olmamalıdır.
+* Yerine geçme prensibinin sağlanmaması durumunda genellikle üst sınıfta ortak olmayan özellik ve fonksiyonlar yeni bir sınıfa aktarılır. ***Bu şekilde alt sınıf ihtiyacı olan sınıflardan özellik ve fonksiyonları miras alabilmektedir.***
 
 <hr></hr>
 
-### I
+### Interface Segregation Prensibi (***I***)
+
+* Inteface Segregation ***(Arayüz Ayrımı)**** prensibi sorumlulukların hepsini bir arayüze toplamak yerine sorumluluklara özgü birçok arayüz oluşturmayı önermektedir.
+* Bu prensip büyük olan arayüzleri daha küçük ve daha özel arayüzlere böler, böylece alt sınıflar sadece ilgili arayüzü uygularlar. Böylelikle kod karmaşıklığı ve bağımlılığı da azaltılmış olur.
 
 <hr></hr>
 
-### D
+### Dependency Inversion Prensibi (***D***)
+
+* Dependency Inversion ***(Bağımlılığı Ters Çevirme)*** prensibi sınıflar arası bağımlılığın olabildiğince az olmasını ve üst seviye sınıfların alt seviye sınıflara bağımlı olmaması gerektiğini önermektedir.
+* Yüksek seviyeli bir sınıfta gereksinimden doğan değişimler alt seviye sınıfları bunu uymaya zorlamaktadır. Ancak alt seviyeli bir sınıftaki değişimler yüksek seviyeli bir sınıfı hiçbir şekilde etkilememesi gerekmektedir.
+* Sınıflar arası bağımlılığın azaltılması için uygulamanın prensiplere uygun olarak tasarlanmasını gerektirir. Eğer bağımlılık olacak ise bu bağımlılık alt seviye sınıfların üst seviye sınıflara bağımlılığı şeklinde olmalıdır.
 
 <hr></hr>
 
@@ -53,13 +64,58 @@
 
   * Tek Nesne ( Singleton )
 
+    * Bu tasarım deseninde, bir sınıfın sistem içinde yalnızca bir tane nesnesi oluşturulabilir.
+    * Tek bir arayüz sunularak, bu nesneye yalnızca buradan erişim sağlanabilir.
+    * Bu desen kullanılarak, sistem içinde değeri değişmeyen, genel değişkenler bu oluşturulan tek nesneye konulabilir.
+    * Sistemde tek nesne yaratılabilme, statik değişken ve yordamlar sayesinde olur.
+    * Statik değişken ve yordamlar, nesneye dayalı programlanın esnekliğini, dinamik nesne yaratılma özelliklerini engellediği için bazı yazılım mühendisleri tarafından eleştirilebilir.
+
   * Fabrika Yordam ( Factory Method )
+
+    * Fabrika yordam tasarım deseni, nesne yaratma sorumluluğunun bir yordama verilmesidir.
+    * Yaratılan nesne, bir sınıf hiyerarşisindeki alt sınıflardan biridir.
+    * Hangi alt sınıfın yaratılacağı kararı fabrika yordam içinde verilir.
+    * Bu yordam ile belirli bir sınıf hiyerarşisindeki alt nesnelerden birinin yaratma sorumluluğu belirli bir arayüze verilerek sistemden soyutlanmış olur.
+    * Böylece nesneleri yaratma kodlarında, kod tekrarları önlenmiş olur.
+    * Sistem içinde sınıfların yaratılacağı yer tek olduğu için, ilgili mantıklar tek bir yerde toplanabilir.
 
   * Soyut Fabrika ( Abstract Factory )
 
+    * Yaratılma sorumluluklarının çeşitli sınıf hiyerarşileri ile sağlandığı bir tasarım desenidir.
+    * İstemci sınıf, çeşitli kategorideki sınıflara ihtiyaç duyar.
+    * Bu sınıflar, sistemde alt/üst sınıf hiyerarşileri şeklinde bulunurlar.
+    * "Soyut Fabrika" tasarım deseni bu karmaşık ve farklı hiyerarşideki sınıfların yaratılma sorumluluğunu çeşitli fabrika sınıflarına verir.
+    * İstemci ilk önce verdiği kriterlere göre uygun bir fabrika sınıfını seçer.
+    * Ardından seçtiği fabrika nesnesi, istemcinin ihtiyaç duyduğu sınıfları yaratıp istemciye döner.
+    * İstemci sınıf, kullandığı sınıfların sadece üst sınıflarını, yani soyut sınıflarını bilir.
+    * Bu sınıfları ona yaratıp döndüren fabrika sınıfının da sadece soyut sınıfını içerir.
+    * Alttaki detaylar istemci sınıftan gizlenmiş, sorumluluk "Soyut Fabrika" tasarım deseni ile fabrika sınıflarına verilmiştir.
+    * Bu tasarım deseni Fabrika Yordam tasarım desenine benzer.
+    * Fakat bu tasarım deseninde yaratılacak birden fazla sınıf hiyerarşisi tipi bulunur.
+    * Fakat "fabrika yordam" tasarım deseninde tek tip nesne yaratılması ihtiyacı bulunur.
+    * Kısaca bu tasarım deseni ile birden fazla sınıf hiyerarşisi nesneleri, kurulacak birden fazla fabrika nesneleri ile yaratılır.
+    * İstemci kendisine uygun fabrika nesnesini yarattırır. İhtiyacı olan nesnelerin yaratılma sorumluluğunu fabrika nesnelerine bırakır.
+
   * Kopya Nesne ( Prototype )
 
+    * Var olan bir nesneden, kopyalama yöntemi ile yeni nesne yaratmak için bu tasarım deseni kullanılır.
+    * Nesne yaratmak için "new" operatörü kullanılmaz.
+    * Yazılım dillerindeki "clone" gibi, nesne kopyalama yordamlarından faydalanılır.
+    * Örneğin java programlama dilinde, bir nesnenin kopyalanabilmesi için, nesnenin "Cloneable" arayüzünden türemiş olması gereklidir.
+    * Bazı nesneler çok büyük olup, çok kaynak harcıyor olabilir.
+    * Bu nesnelerin yeniden yaratılması yerine, kolonlanması performans ve kaynak kullanımı açısından tasarruf edilmesine yarar.
+    * Bu durumlarda "Kopya Nesne" tasarım deseni kullanılabilir.
+
   * Kurucu ( Builder )
+
+     * Bu tasarım deseni ile bir nesneyi, bir sınıfı, aşama aşama farklı özellikleri ile oluşturabiliriz.
+     * Nesneyi farklı özellikler ile oluşturmaya yarayan bu sınıfa Kurucu nesne ismi verilir.
+     * Kurucu nesneden farklı özelliklerde alt sınıflar da türeyebilir.
+     * Kurucunun oluşturduğu nesneye ihtiyaç duyan istemci sınıf, istediği özelliklerde nesneyi oluşturabilecek kurucu oluşturur ve kurucuya istediği nesnenin oluşması için isteklerde bulunur.
+     * En sonunda da bu nesneyi alır ve kullanır.
+     * İstemci böylece nesne yaratma sorumluluğunu kurucu nesneye bırakmış olur.
+     * Tabi her basit nesnenin, bir de kurucusunu oluşturmaya gerek yoktur.
+     * Kurucu nesne genelde, içinde çok özellik barındıran, karmaşık nesnelerin oluşumunda görev alması daha yerindedir.
 
 <hr></hr>
 
@@ -69,17 +125,60 @@
 
   * Adaptör ( Adapter )
 
+    * Mevcut bir sınıfı veya arayüz sınıfını, eldeki farklı bir arayüz sınıfına uygun hale getirerek tekrar kullanmak amacıyla uygulanır.
+    * Çoğu zaman işe yarayacağını düşündüğümüz mevcut bir sınıfı kendi sistemimizde tekrar kullanmak isteriz.
+    * Fakat mevcut sınıf, tam beklediğimiz gibi olmayabilir.
+    * Bu durumda araya bir tane adaptör yazarak, mevcut sınıfı kendi sistemimize uygun hale getirebiliriz.
+    * Böylece adapte edilen nesnede kod değişikliği olmadan benzer bir arayüzü destekler hale getiririz.
+    * Ayrıca adaptasyon işlemi sırasında, adapte edilen nesnenin desteklemediği özellikler de adaptör tarafından gerçekleştirilebilir.
+
   * Ağaç Yapısı ( Composite )
+
+    * Bu tasarım deseninin amacı, nesneleri ağaç yapısına göre düzenleyerek, ağaç yapısındaki alt üst ilişkisini kurmaktır.
+    * Bu tasarım desenine göre, ağaç yapısındaki üst ve alt nesneler aynı arayüz sınıfından türeyerek, birbirlerine benzerler.
+    * Yani istemci, yaprak nesneye de üst nesneye de aynı şekilde davranır.
+    * Böylece hiyerarşiyi ifade etmek ve hiyerarşi üzerinde işlem yapmak kolaylaşır.
+    * Hiyerarşiye yeni nesneler eklemek de kolay hale gelir.
 
   * Dekorasyon ( Decorator )
 
+    * Bu desen, nesneye ek özellikler eklemek için kullanılır.
+    * Bu özellikler eklenirken, esas nesnenin bundan haberi yoktur, bu nesnede kod değişikliği gerekmez.
+    * Ayrıca nesnenin özeliklerini arttırmak için, temel nesneden türetilip de, yeni nesneler yaratılmasına gerek olmaz.
+    * Yani bu desen, bir nesneye alt sınıflar yaratılmaksızın, dinamik olarak yeni özellikler kazandırmak için kullanılır.
+
   * Hafif Ağırlık ( Flyweight )
+
+    * Çok sayıda nesnenin sistemde olduğu durumlarda, nesne sayısının sistemde problemlere neden olmaması için kullanılan tasarım desenidir.
+    * Çünkü çok sayıda nesne kullanmanın maliyeti yüksektir. Yeni nesneler oluşturmadan mevcut nesneleri kullanma mantığına göre çalışır.
+    * Hafif ağırlık nesnelerini bir koleksiyonda tutmak gerekir.
+    * Tutulan nesnelerin durumları az ise, ortak nesnelerin sayısı azalır.
+    * Böylece bu koleksiyonun büyüklüğü de azalmış olur.
 
   * Köprü ( Bridge )
 
+    * Bu tasarım deseni, soyutlama ile gerçekleştirmeyi ayrı sınıf hiyerarşisi içinde ayırmak için kullanılır.
+    * Sınıflara daha fazla bir soyutlama ve genişleme imkanı tanır. Desende hem soyutlama kısmı, hem de gerçekleştirme kısmında bir üst sınıfı bulunur.
+    * Bu üst sınıfların altındaysa belirli bir sınıf hiyerarşisi bulunur. Bu iki hiyerarşi de birbirlerine bağlıdır.
+    * İşte desen, iki kısım arasında köprü gibi bir yapı olarak duran bu bağdan ismini almıştır. Soyutlama kısmında, sistemin daha üst düzey işlemleri bulunur.
+    * Gerçekleştirme kısmında ise, bu soyutlama kısmındaki üst düzey işlemlere bağlı daha basit ve bu üst düzey işlemleri detaylandıran işlemler bulunur.
+    * Sistemin gerçekleştirme ve soyutlama kısmında kalıcı bir bağlılık istemiyorsak, bu iki kısmında birbirlerinden bağımsız olarak alt sınıflarla genişlemesine imkan vermek istiyorsak, gerçekleştirme kısmını istemciden tamamen saklamak istiyorsak bu deseni kullanabiliriz.
+
   * Ön Yüz ( Facade )
 
+    * Bu tasarım deseni, sistemin detaylarını saklayarak, istemcinin dışarıdan sisteme ulaşabilmesi için tek bir ön yüz sunar.
+    * Sistemdeki alt sınıflara, bu ön yüz sınıfı ile ulaşılır.
+    * İstemci yanlızca sistemdeki bu ön yüz sınıfını bilir.
+    * Yani kısaca ön yüz sınıfı, sistemin dışarıya açılmış bir kapısı gibidir.
+
   * Özdeş Nesne ( Proxy )
+
+    * Yaratılması pahalı bir çok işlem yapan bir nesneyi taklit eden bir başka nesnenin kullanılmasıdır.
+    * Örneğin bir nesne yarattığımızda veya bir nesnenin bir yordamını çağırdığımızda, bu çağırım bellekte çok yer tutan daha başka bir çok nesne yaratabilir veya ağa bağlanma, veritabanından büyük bir veri alma gibi pahalı işlemler yapabilir.
+    * Fakat uygulamanın akışına göre, bu işlemleri gerçekten yapmaya ihtiyaç olmayabilir.
+    * İşte bu durumlarda, bu pahalı işlemlerden doğan zaman ve kaynak kayıplarını önlemek için özdeş nesne kullanılır.
+    * Gerçekten bu pahalı işlem çağırılırsa, gerçek nesne oluşturulup, bu pahalı işlemler ihtiyaç olduğunda yapılır.
+    * Bu tasarım deseni kullanılarak, sisteme yük getiren gereksiz pahalı işlemler önlenir, böylece sistem daha hızlı ve sağlıklı hale gelir.
 
 <hr></hr>
 
