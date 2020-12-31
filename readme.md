@@ -64,7 +64,7 @@
 
   * Tek Nesne ( Singleton )
 
-    * Bu tasarım deseninde, bir sınıfın sistem içinde yalnızca bir tane nesnesi oluşturulabilir.
+    * Bu tasarım deseninde, bir sınıfın içinde yalnızca bir tane nesnesi oluşturulabilir. Tekrar oluşturulmasına izin verilmemeli.
     * Tek bir arayüz sunularak, bu nesneye yalnızca buradan erişim sağlanabilir.
     * Bu desen kullanılarak, sistem içinde değeri değişmeyen, genel değişkenler bu oluşturulan tek nesneye konulabilir.
     * Sistemde tek nesne yaratılabilme, statik değişken ve yordamlar sayesinde olur.
