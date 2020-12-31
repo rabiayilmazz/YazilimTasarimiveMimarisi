@@ -68,7 +68,7 @@
     * Tekrar oluşturulmasına izin verilmemeli.
     * Tek bir arayüz sunularak, bu nesneye yalnızca buradan erişim sağlanılmalı.
     * Direk nesne oluşturmaya erişim izni olmamalıdır.
-    * Bu desen kullanılarak, sistem içinde değeri değişmeyen, genel değişkenler bu oluşturulan tek nesneye konulabilir. Mesela veritabanı.
+    * Bu desen kullanıldığında, proje de değerinin değişmesi gerekmeyen durumlarda kullanılabilir. Mesela veritabanı.
     * Sistemde tek nesne oluşturabilme, statik değişkenler ve fonksiyonlar sayesinde olur.
 
 
