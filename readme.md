@@ -127,7 +127,6 @@
 
   * Adaptör ( Adapter )
 
-    * Mevcut bir sınıfı veya arayüz sınıfını, eldeki farklı bir arayüz sınıfına uygun hale getirerek tekrar kullanmak amacıyla uygulanır.
     * Var olan bir sistemimize yeni bir sınıf ya interface entegre etmek istediğimizde kullanırız bu tasarım desenini.
     * Mevcut sistemimize ***Target*** denir.
     * Eklemek istediğimiz sınıfa ya da interfaceye ***Adaptee*** denir.
