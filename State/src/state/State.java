@@ -3,19 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package muzikcalar;
-
-import bridgeasil.Muzik;
+package state;
 
 /**
  *
  * @author Rabia
  */
-public class  Fizy implements MuzikCalar{
-
-    @Override
-    public String muzikCal(Muzik muzik) {
-        return null;   
-    }
+public interface State {
+    public void durdur();
+    public void yerdeCalis();
+    public void yuksel();
     
 }

@@ -11,5 +11,6 @@ import bridgeasil.Muzik;
  *
  * @author Rabia
  */
-public interface MuzikCalar extends Fizy {
+public interface MuzikCalar{
+     public String muzikCal(Muzik muzik);
 }
