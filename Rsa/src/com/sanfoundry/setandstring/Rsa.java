@@ -47,15 +47,8 @@ public class Rsa
         String teststring;
         System.out.println("Enter the plain text:");
         teststring = in.readLine();
-        System.out.println("Encrypting String: " + teststring);
-        System.out.println("String in Bytes: "
-                + bytesToString(teststring.getBytes()));
-        // encrypt
-        byte[] encrypted = rsa.encrypt(teststring.getBytes());
-        // decrypt
-        byte[] decrypted = rsa.decrypt(encrypted);
-        System.out.println("Decrypting Bytes: " + bytesToString(decrypted));
-        System.out.println("Decrypted String: " + new String(decrypted));
+        deneme(teststring);
+        
     }
 
     private static String bytesToString(byte[] encrypted)
@@ -77,5 +70,17 @@ public class Rsa
     public byte[] decrypt(byte[] message)
     {
         return (new BigInteger(message)).modPow(d, N).toByteArray();
+    }
+     private static void deneme(String teststring) {
+         Rsa rsa = new Rsa();
+        System.out.println("Encrypting String: " + teststring);
+        System.out.println("String in Bytes: "
+                + bytesToString(teststring.getBytes()));
+        // encrypt
+        byte[] encrypted = rsa.encrypt(teststring.getBytes());
+        // decrypt
+        byte[] decrypted = rsa.decrypt(encrypted);
+        System.out.println("Decrypting Bytes: " + bytesToString(decrypted));
+        System.out.println("Decrypted String: " + new String(decrypted));
     }
 }
