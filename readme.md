@@ -119,8 +119,6 @@
      * Tabi her basit nesnenin, bir de kurucusunu oluşturmaya gerek yoktur.
      * Kurucu nesne genelde, içinde çok özellik barındıran, karmaşık nesnelerin oluşumunda görev alması daha yerindedir.
 
-<hr></hr>
-
 2. ***Yapısal Tasarım Desenleri***
 
 **Bu sınıfta yer alan tasarım desenleri, sınıflar arasındaki ilişkileri belirleyerek, tasarımı kolaylaştırırlar. Sınıflar arası ilişkiler nasıl olmalı? Türetme, soyutlama, nesnesini içerme? Hangi yol ile sınıflar birbirlerine bağlı olmalı. Bu soruların yanıtlarını açıklarlar. Başlıca yapısal tasarım desenleri: Adaptör, Ağaç Yapısı, Dekorasyon, Hafif Ağırlık, Köprü, Ön Yüz, Özdeş Nesne.**
